@@ -6,7 +6,7 @@ CREATE SCHEMA cine ;
 /*Se crea un usuario para la base de datos llamado "usuario_prueba" y tiene la contraseña "Usuario_Clave."*/
 create user 'usuario_prueba'@'%' identified by 'Usuar1o_Clave.';
 
-/*Se asignan los prvilegios sobr ela base de datos TechShop al usuario creado */
+/*Se asignan los prvilegios sobr ela base de datos EntradasCine al usuario creado */
 grant all privileges on cine.* to 'usuario_prueba'@'%';
 flush privileges;
 

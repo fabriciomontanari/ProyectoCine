@@ -7,13 +7,13 @@
     </head>
     <body>
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
-        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-dark">
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-succes">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">   
                         <button 
                             type="button" 
-                            class="btn btn-primary btn-block" 
+                            class="btn btn-dark btn-block" 
                             data-bs-toggle="modal" 
                             data-bs-target="#agregarPelicula">
                             <i class="fas fa-plus"></i> [[#{pelicula.agregar}]]

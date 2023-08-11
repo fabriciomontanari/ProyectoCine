@@ -13,14 +13,14 @@
             height: 100vh;
             "
             >
-            <header th:replace="~{layout/plantilla :: header}"/>
+            <header th:replace="~{layout/plantilla :: header}"></header>
 
-            <section th:replace="~{pelicula/fragmentos :: botonesAgregar}"/>
-            <section th:replace="~{pelicula/fragmentos :: agregarPelicula}"/>
-            <section th:replace="~{pelicula/fragmentos :: listadoPeliculas}"/>
+            <section th:replace="~{usuario/fragmentos :: botonesAgregar}"></section>
+            <section th:replace="~{usuario/fragmentos :: agregarUsuario}"></section>
+            <section th:replace="~{usuario/fragmentos :: listadoUsuarios}"></section>
         </div>
         <div class="fixed-bottom">
-            <footer th:replace="~{layout/plantilla :: footer}"/>
-        </div>    
+            <footer th:replace="~{layout/plantilla :: footer}"></footer>
+        </div>
     </body>
 </html>

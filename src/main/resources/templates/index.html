@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
     <head th:replace="~{layout/plantilla :: head}">
- 
+
         <title>EntradasCine</title>
+
     </head>
     <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
+        <div class="text-white">
         <div
             class="bg-image"
             style="
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sala_de_cine.jpg/800px-Sala_de_cine.jpg');
+            background-image: url('https://static.vecteezy.com/system/resources/previews/007/000/414/non_2x/illustration-of-cinema-auditorium-with-blue-seats-and-blank-screen-vector.jpg');
             height: 100vh;
             "
-            ></div>
+            >
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
+        </div>
+        </div>    
+       <div class="fixed-bottom">
         <footer th:replace="~{layout/plantilla :: footer}"/>
+       </div>
     </body>
 </html>
