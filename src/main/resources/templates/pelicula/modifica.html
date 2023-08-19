@@ -6,11 +6,20 @@
         <title>EntradasCine</title>
     </head>
     <body>
-        <header th:replace="~{layout/plantilla :: header}"/>        
-        
-        <section th:replace="~{pelicula/fragmentos :: editarPelicula}"/>
-        
-        <footer th:replace="~{layout/plantilla :: footer}"/>
+        <div class="text-white bg-dark">
+            <div
+                class="bg-image"
+                style="
+                background-image: url('https://static.vecteezy.com/system/resources/previews/007/000/414/non_2x/illustration-of-cinema-auditorium-with-blue-seats-and-blank-screen-vector.jpg');
+                height: 100vh;
+                "
+                >
+                <header th:replace="~{layout/plantilla :: header}"/>        
 
+                <section th:replace="~{pelicula/fragmentos :: editarPelicula}"/>
+
+                <footer th:replace="~{layout/plantilla :: footer}"/>
+            </div>
+        </div>
     </body>
 </html>

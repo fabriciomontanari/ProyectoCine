@@ -25,15 +25,23 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" 
                          id="navbarCollapse">
-                            <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
+                        <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/pelicula/listado}">[[#{plantilla.peliculas}]]</a></li>
                             <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
                             </li>
-                            </ul>    
+                        </ul>    
 
 
-
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Lang</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item"  th:href="@{/(lang=es)}">ES</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/(lang=en)}">EN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                         <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item px-2">
                                 <a class="nav-link" th:href="@{/login}">

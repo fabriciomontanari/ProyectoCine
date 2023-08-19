@@ -6,33 +6,33 @@
         <title>EntradasCine</title>
     </head>
     <body>
-        <section th:fragment="listadoProductos" id="productos">
+        <section th:fragment="listadoPeliculas" id="peliculas">
             <div class="container">
                 <div class="row row-cols-2" >
-                    <h2 class="inline">[[#{index.nuestrosProductos}]]</h2>
+                    <h2 class="inline">[[#{index.nuestrosPeliculas}]]</h2>
                     <div id="resultsBlock"></div></div>
                 <div class="row row-cols-3" 
-                     th:if="${productos != null and !productos.empty}">
-                    <div class="card" th:each="producto : ${productos}">
-                        <div class="card-body">
-                            <h5 class="card-title">[[${producto.descripcion}]]</h5>
+                     th:if="${peliculas != null and !peliculas.empty}">
+                    <div class="card" th:each="pelicula : ${peliculas}">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">[[${pelicula.descripcion}]]</h5>
                             <figure>
-                                <img th:src="@{${producto.rutaImagen}}" height="200"/>
-                                <figcaption>[[${producto.precio}+' ('+${producto.existencias}+')']]
+                                <img th:src="@{${pelicula.rutaImagen}}" height="200"/>
+                                <figcaption>[[${pelicula.precio}+' ('+${pelicula.existencias}+')']]
                                 </figcaption>
                             </figure>
                             <form>
-                                <input type="hidden" name="texto" th:value="${producto.idProducto}"/>
-                                <input type="hidden" name="texto" th:value="${producto.existencias}"/>
+                                <input type="hidden" name="texto" th:value="${pelicula.idPelicula}"/>
+                                <input type="hidden" name="texto" th:value="${pelicula.existencias}"/>
                                 <button class="btn btn-dark" id="addCar" 
                                         name="addCar" onclick="addCard(this.form)" 
                                         type="button"><i class="fas fa-cart-plus"></i></button>
                             </form>
-                            <p class="card-text">[[${producto.detalle}]]</p>                            
+                            <p class="card-text">[[${pelicula.detalle}]]</p>                            
                         </div>
                     </div>
                 </div>
-                <div th:if="${productos == null or productos.empty}">
+                <div th:if="${peliculas == null or peliculas.empty}">
                     [[#{carrito.no_mostrar}]]</div>
             </div>
         </section>
@@ -61,8 +61,8 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th>#</th>
-                                            <th>[[#{producto.descripcion}]]</th>
-                                            <th>[[#{producto.precio}]]</th>
+                                            <th>[[#{pelicula.descripcion}]]</th>
+                                            <th>[[#{pelicula.precio}]]</th>
                                             <th>[[#{carrito.cantidad}]]</th>
                                             <th>[[#{carrito.total}]]</th>
                                             <th></th>
@@ -77,13 +77,13 @@
                                             <td class="text-center">[[${item.cantidad}]]</td>
                                             <td class="text-center">[[${item.cantidad*item.precio}]]</td>
                                             <td>
-                                                <a th:href="@{/carrito/eliminar/}+${item.idProducto}"
+                                                <a th:href="@{/carrito/eliminar/}+${item.idPelicula}"
                                                    class="btn btn-dark">
                                                     <i class='fas fa-trash'></i> [[#{accion.eliminar}]]
                                                 </a>
                                             </td>
                                             <td>
-                                                <a th:href="@{/carrito/modificar/}+${item.idProducto}"
+                                                <a th:href="@{/carrito/modificar/}+${item.idPelicula}"
                                                    class="btn btn-dark">
                                                     <i class='fas fa-pencil'></i> [[#{accion.actualizar}]]
                                                 </a>
@@ -109,7 +109,7 @@
                         <div class="card text-center bg-dark text-white mb-3">
                             <div class="card-body">
                                 <a th:href="@{/}"
-                                   class="btn btn-success">
+                                   class="btn btn-dark">
                                     <i class='fas fa-reply'></i> [[#{carrito.seguirComprando}]]
                                 </a>
                             </div>

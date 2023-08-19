@@ -14,14 +14,14 @@
             "
             >
             <header th:replace="~{layout/plantilla :: header}"/>
+            
+            <section th:replace="~{carrito/fragmentos :: verCarrito}"/>
 
-            <section th:replace="~{pelicula/fragmentos :: botonesAgregar}"/>
-            <section th:replace="~{pelicula/fragmentos :: agregarPelicula}"/>
-            <section th:replace="~{pelicula/fragmentos :: listadoPeliculas}"/>
+            <section th:replace="~{carrito/fragmentos :: listadoCarrito"/>
+            
         </div>
         <div class="fixed-bottom">
             <footer th:replace="~{layout/plantilla :: footer}"/>
         </div>    
     </body>
 </html>
-
