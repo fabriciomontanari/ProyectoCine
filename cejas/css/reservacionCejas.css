@@ -1,0 +1,179 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+p {
+    font-family: arial, helvetica, roboto, "new times roman", lato;
+}
+
+/*
+    Titulos
+*/
+
+h2{
+    padding-top: 50px;
+    font-size: 40px;
+    font-family: 'vidaloka','sans-serif';
+
+}
+/* 
+Aqui va el header
+*/
+
+
+header{
+    display: flex;
+    height: 60px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    padding-top: 250px;
+
+}
+
+
+.navbar{
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    z-index: 1000;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0 10px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+    transition: .3 linear;
+    z-index: 1000;
+}
+
+.navbar ul li:hover{
+    transform: scale(1.1);
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    transition: .3s linear;
+}
+
+.navbar ul li a:hover{
+    color: silver;
+    transform: scale(1.1);
+}
+
+.navbar ul li:hover .services{
+    display: block;
+}
+
+.navbar .dropdown .services{
+    display: none;
+    background-color: black;
+    font-weight: normal;
+    font-size: 15px;
+    position: absolute;
+    width: 100%;
+}
+.navbar .dropdown .services li{
+    display: block;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+.navbar .dropdown .services li a{
+    display: block;
+}
+/*
+Aqui va el main
+*/
+
+main{
+    margin: 200px 50px;
+    border-bottom: 1px solid white;
+}
+
+
+/*
+Aqui va el body
+*/
+
+body{
+    font-family: 'vidaloka','sans-serif';
+    margin: 0;
+}
+
+
+/*
+Aqui va el diseno de cejas
+*/
+
+#disecejas{
+    width: 30%;
+}
+.container_img_cejas{
+    width: 150px;
+}
+
+/*
+Aqui va el lifting de cejas
+*/
+#lifting{
+    width: 30%;
+}
+.container_img_lifting{
+    width: 150px;
+
+}
+
+
+/*
+Aqui va el laminado de cejas
+*/
+
+#laminado{
+    width: 30%;
+}
+.container_img_laminado{
+    width: 150px;
+}
+
+/*
+Aqui va el footer
+*/
+footer{
+    margin: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.formulario{
+    color: white;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 15px;
+    padding: 0.5em 1em;
+    border-radius: 5px;    
+    cursor: pointer;
+}
